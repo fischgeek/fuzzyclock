@@ -1,0 +1,89 @@
+body {
+    background: black;
+    margin: 0;
+    /* font-family: monospace; */
+    /* font-family: 'Ubuntu Mono', monospace; */
+    font-family: 'Jura', sans-serif;
+}
+.ah1 {
+    color: rgb(42, 39, 39);
+    font-size: 79px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: monospace;
+}
+#itis {
+    color: white;
+}
+#mainContainer {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding-top: 40px;
+/*    border: 1px solid white;*/
+}
+#controls:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+.toggleOn {
+    color: white;
+    border: 1px solid white;
+}
+h1 {
+  font-size: 75px;
+  margin: 0;
+}
+@media (max-width: 715px) {
+    h1 {
+        font-size: 65px;
+    }
+}
+@media (max-width: 590px) {
+    h1 {
+        font-size: 60px;
+    }
+}
+@media (max-width: 545px) {
+    h1 {
+        font-size: 55px;
+    }
+}
+@media (max-width: 500px) {
+    h1 {
+        font-size: 50px;
+    }
+}
+@media (max-width: 460px) {
+    h1 {
+        font-size: 45px;
+    }
+}
+@media (max-width: 415px) {
+    h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 360px) {
+    h1 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 310px) {
+    h1 {
+        font-size: 30px;
+    }
+}
+#mainContainer2 {
+    width: 90%;
+    height: 90%;
+    border: 1px solid white;
+    overflow: auto;
+}
+#test {
+    width: 100%;
+    height: 90%;
+    text-align: center;
+    font-size: 40px;
+}
