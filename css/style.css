@@ -4,6 +4,8 @@ body {
     /* font-family: monospace; */
     /* font-family: 'Ubuntu Mono', monospace; */
     font-family: 'Jura', sans-serif;
+    display: flex;
+    align-items: center;
 }
 .ah1 {
     color: rgb(42, 39, 39);
