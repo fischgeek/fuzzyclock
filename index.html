@@ -9,101 +9,15 @@
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Fuzzy Clock">
-
-        <script src="js/jquery.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script src="js/moment.js" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Jura|Ubuntu+Mono" rel="stylesheet">
-        <script>
-            $(document).ready(function () {
-                setInterval(function () {
-                    var a_hour = moment().format('h');
-                    var a_hourPlus1 = (parseInt(a_hour) + 1);
-                    var a_min = moment().format('mm');
-                    
-                    $('span').each(function () {
-                       $(this).css('color','rgb(42, 39, 39)');
-                    });
-                    $('#itis').css('color','white');
-                    
-                    if (a_min >= 0 && a_min < 5) {
-                        $('#oclock').css('color','white');
-                        $('#hr' + hour).css('color','white');
-                    } 
-                    else if (a_min >= 5 && a_min < 10) {
-                        $('#minIdFive').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    }
-                    else if (a_min >= 10 && a_min < 15) {
-                        $('#minIdTen').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    } 
-                    else if (a_min >= 15 && a_min < 20) {
-                        $('#minIdA').css('color','white');
-                        $('#minIdQuarter').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    }
-                    else if (a_min >= 20 && a_min < 25) {
-                        $('#minIdTwenty').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    }
-                    else if (a_min >= 25 && a_min < 30) {
-                        $('#minIdTwenty').css('color','white');
-                        $('#minIdFive').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    } 
-                    else if (a_min >= 30 && a_min < 35) {
-                        $('#minIdHalf').css('color','white');
-                        $('#minIdPast').css('color','white');
-                        $('#hr' + a_hour).css('color','white');
-                    } 
-                    else if (a_min >= 35 && a_min < 40) {
-                        $('#minIdTwenty').css('color','white');
-                        $('#minIdFive').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdTo').css('color','white');
-                        $('#hr' + a_hourPlus1).css('color','white');
-                    } 
-                    else if (a_min >= 40 && a_min < 45) {
-                        $('#minIdTwenty').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdTo').css('color','white');
-                        $('#hr' + a_hourPlus1).css('color','white');
-                    } 
-                    else if (a_min >= 45 && a_min < 50) {
-                        $('#minIdA').css('color','white');
-                        $('#minIdQuarter').css('color','white');
-                        $('#minIdTo').css('color','white');
-                        $('#hr' + a_hourPlus1).css('color','white');
-                    } 
-                    else if (a_min >= 50 && a_min < 55) {
-                        $('#minIdTen').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdTo').css('color','white');
-                        $('#hr' + a_hourPlus1).css('color','white');
-                    }
-                    else if (a_min >= 55 && a_min < 60) {
-                        $('#minIdFive').css('color','white');
-                        $('#minIdMinutes').css('color','white');
-                        $('#minIdTo').css('color','white');
-                        $('#hr' + a_hourPlus1).css('color','white');
-                    }
-                }, 1000);
-            });
-        </script>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/moment.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/script.js"></script>
     </head>
     <body>
         <div id='mainContainer'>
-            <h1><span id='itis'>IT IS</span> <span id='minIdA'>A</span> <span id='minIdHalf'>HALF</span> <span id='minIdTen'>TEN</span><br />
+            <h1><div id='itis' class="active">IT IS</div> <span id='minIdA'>A</span> <span id='minIdHalf'>HALF</span> <span id='minIdTen'>TEN</span><br />
             <span id='minIdQuarter'>QUARTER</span> <span id='minIdTwenty'>TWENTY</span><br />
             <span id='minIdFive'>FIVE</span> <span id='minIdMinutes'>MINUTES</span> <span id='minIdTo'>TO</span><br />
             <span id='minIdPast'>PAST</span> <span id='hr1'>ONE</span> <span id='hr3'>THREE</span><br />
