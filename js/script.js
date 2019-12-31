@@ -71,6 +71,9 @@ $(document).ready(function () {
         }
 
         if (!firstHalfOfHour) { hrVal = a_hourPlus1 }
+        for(var i = 1; i < 13; i++) {
+            show('#hr' + i, false)    
+        }
         show('#hr' + hrVal, true)
         show('#oclock', exactHour)
         show('#minIdTo', !firstHalfOfHour)
@@ -85,6 +88,10 @@ $(document).ready(function () {
     }, 1000)
 
     function show(id, show) {
-        show ? $(id).addClass('active') : $(id).removeClass('active')
+        if (show == true) {
+            $(id).attr('class', 'active')
+        } else {
+            $(id).attr('class', '')
+        }
     }
 })
